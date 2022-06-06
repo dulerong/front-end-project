@@ -1,23 +1,23 @@
 <template lang="pug">
 div
-	h1(class='ml-1') Table Data Page
-	v-select(
-		class='mx-1'
-		style="max-width: 200px"
-		v-model='selectedProvince'
-		:items="$_provinces"
-		label="Province"
-		item-text="text"
-		item-value="value"
+  h1(class='ml-1') Table Data Page
+  v-select(
+    class='mx-1'
+    style="max-width: 200px"
+    v-model='selectedProvince'
+    :items="$_provinces"
+    label="Province"
+    item-text="text"
+    item-value="value"
     return-object
-		@change='changeProvince'
-	)
-	v-data-table(
-		:headers="headers"
-		:items="displayData"
-		:items-per-page="50"
-		class="elevation-1"
-	)
+    @change='changeProvince'
+  )
+  v-data-table(
+    :headers="headers"
+    :items="displayData"
+    :items-per-page="50"
+    class="elevation-1"
+  )
 </template>
 
 <script>

@@ -1,19 +1,19 @@
 <template lang="pug">
 div
-	v-select(
-		class='mx-1'
-		style="max-width: 200px"
-		v-model='selectedProvince'
-		:items="$_provinces"
-		label="Province"
-		item-text="text"
-		item-value="value"
+  v-select(
+    class='mx-1'
+    style="max-width: 200px"
+    v-model='selectedProvince'
+    :items="$_provinces"
+    label="Province"
+    item-text="text"
+    item-value="value"
     return-object
-		@change='changeProvince'
-	)
-	ApexChart(
-		:showChart='showChart'
-	)
+    @change='changeProvince'
+  )
+  ApexChart(
+    :showChart='showChart'
+  )
 </template>
 
 <script>

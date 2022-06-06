@@ -1,9 +1,9 @@
 <template lang="pug">
 v-app
-	AppBar(v-bind='drawer')
-	NavigationDrawer(:drawer='drawer')
-	v-main
-		slot
+  AppBar(v-bind='drawer')
+  NavigationDrawer(:drawer='drawer')
+  v-main
+    slot
 </template>
 
 <script>
