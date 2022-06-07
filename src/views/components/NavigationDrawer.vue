@@ -13,7 +13,7 @@ v-navigation-drawer(
   v-divider
   v-list(style="padding: 0px")
     v-list-item(
-      v-for="(tab, i) in $_navigation[0].children"
+      v-for="(tab, i) in $_navigation"
       :key="i"
       :to="{ name: tab.name }"
       exact
