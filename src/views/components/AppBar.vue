@@ -7,8 +7,6 @@ v-app-bar(
 )
   v-app-bar-nav-icon(@click.stop="toggle")
   v-spacer
-  v-divider(vertical class="mx-1" inset)
-  v-btn Button
 </template>
 
 <script>
