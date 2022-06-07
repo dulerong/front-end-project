@@ -6,19 +6,19 @@ import DefaultLayout from '~layouts/DefaultLayout'
 
 // pages
 import TableDataPage from '~pages/TableDataPage'
-import AboutPage from '~pages/AboutPage'
+import ChartPage from '~pages/ChartPage'
 
 export default [
   {
-    path: routePath.home.path,
-    name: routePath.home.name,
+    path: routePath.table.path,
+    name: routePath.table.name,
     component: TableDataPage,
     meta: { layout: DefaultLayout }
   },
   {
-    path: routePath.about.path,
-    name: routePath.about.name,
-    component: AboutPage,
+    path: routePath.chart.path,
+    name: routePath.chart.name,
+    component: ChartPage,
     meta: { layout: DefaultLayout }
   }
 ]

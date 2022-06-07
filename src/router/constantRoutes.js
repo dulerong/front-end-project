@@ -1,16 +1,17 @@
 import Vue from 'vue'
+import { mdiTableLarge } from '@mdi/js'
 
 export const routePath = {
-  home: {
-    title: 'Home',
+  table: {
+    title: 'Table',
     path: '/',
-    name: 'home',
-    icon: 'mdi-home'
+    name: 'table',
+    icon: mdiTableLarge
   },
-  about: {
-    title: 'About',
-    path: '/about',
-    name: 'about',
+  chart: {
+    title: 'Chart',
+    path: '/chart',
+    name: 'chart',
     icon: 'mdi-file-chart'
   }
 }
@@ -19,10 +20,10 @@ Vue.prototype.$_routePath = routePath
 export const navigation = [
   {
     title: 'GENERAL',
-    children: [routePath.home, routePath.about]
+    children: [routePath.table, routePath.chart]
   }
 ]
 Vue.prototype.$_navigation = navigation
 
-export const footer_navigation = [routePath.home, routePath.about]
+export const footer_navigation = [routePath.table, routePath.chart]
 Vue.prototype.$_footer_navigation = footer_navigation
