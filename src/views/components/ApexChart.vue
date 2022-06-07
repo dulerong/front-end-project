@@ -2,7 +2,7 @@
 ApexChart(
   v-if='showChart'
   ref="chart"
-  type="line"
+  type="bar"
   :height='screenHeight'
   :options="chartOptions"
   :series="chartData"
@@ -31,18 +31,15 @@ export default {
         }
       ]
     },
-    chartDate() {
-      return this.covidData.map(item => item.date)
-    },
     chartTitle() {
       return {
         text: this.province.text,
-        align: 'left'
+        align: 'center'
       }
     },
     chartXAxis() {
       return {
-        categories: this.chartDate,
+        categories: this.covidData.map(item => item.date),
         title: {
           text: 'Date'
         }
@@ -59,41 +56,30 @@ export default {
       return {
         chart: {
           height: 350,
-          type: 'line',
-          dropShadow: {
-            enabled: true,
-            color: '#000',
-            top: 18,
-            left: 7,
-            blur: 10,
-            opacity: 0.2
-          },
+          type: 'bar',
           toolbar: {
             show: false
           }
         },
-        stroke: {
-          curve: 'smooth'
+        dataLabels: {
+          enabled: false
         },
         title: this.chartTitle,
         grid: {
           borderColor: '#e7e7e7',
           row: {
-            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+            colors: ['#f3f3f3', 'transparent'],
             opacity: 0.5
           }
         },
-        markers: {
-          size: 1
-        },
         xaxis: this.chartXAxis,
         yaxis: this.chartYAxis,
-        legend: {
-          position: 'top',
-          horizontalAlign: 'right',
-          floating: true,
-          offsetY: -25,
-          offsetX: -5
+        tooltip: {
+          y: {
+            formatter: function (val) {
+              return val.toLocaleString()
+            }
+          }
         }
       }
     }
