@@ -13,17 +13,15 @@ export const routePath = {
     path: '/chart',
     name: 'chart',
     icon: 'mdi-file-chart'
+  },
+  map: {
+    title: 'Map',
+    path: '/map',
+    name: 'map',
+    icon: 'mdi-google-maps'
   }
 }
 Vue.prototype.$_routePath = routePath
 
-export const navigation = [
-  {
-    title: 'GENERAL',
-    children: [routePath.table, routePath.chart]
-  }
-]
+export const navigation = [routePath.table, routePath.chart, routePath.map]
 Vue.prototype.$_navigation = navigation
-
-export const footer_navigation = [routePath.table, routePath.chart]
-Vue.prototype.$_footer_navigation = footer_navigation

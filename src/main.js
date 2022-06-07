@@ -3,6 +3,7 @@ import App from './App'
 import router from './router'
 import { store } from './store'
 import vuetify from './plugins/vuetify'
+import 'leaflet/dist/leaflet.css'
 
 import './plugins/axios'
 import './plugins/day'
